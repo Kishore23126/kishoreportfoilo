@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cyber-neon">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KISHORE G | Creative Developer Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@300;400;500;700&family=Space+Mono&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Canvas Particle Background -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Theme Customizer Panel -->
+    <div class="theme-panel-toggle" id="theme-panel-toggle" title="Customize Colors">
+        <i class="fa-solid fa-palette"></i>
+    </div>
+    <div class="theme-panel" id="theme-panel">
+        <h3>Select Mood</h3>
+        <div class="theme-options">
+            <button class="theme-btn active" data-theme="cyber-neon" style="--btn-color: #FFD700;" title="Gold & White">
+                <span class="color-dot" style="background: linear-gradient(135deg, #FFD700, #ffffff);"></span>
+                Gold & White
+            </button>
+            <button class="theme-btn" data-theme="sunset-glow" style="--btn-color: #ff5e36;" title="Sunset Glow">
+                <span class="color-dot" style="background: linear-gradient(135deg, #ff5e36, #f107a3);"></span>
+                Sunset Glow
+            </button>
+            <button class="theme-btn" data-theme="forest-aura" style="--btn-color: #00ff87;" title="Forest Aura">
+                <span class="color-dot" style="background: linear-gradient(135deg, #00ff87, #60efff);"></span>
+                Forest Aura
+            </button>
+            <button class="theme-btn" data-theme="pastel-sweet" style="--btn-color: #ff9a9e;" title="Pastel Sweet">
+                <span class="color-dot" style="background: linear-gradient(135deg, #ff9a9e, #fecfef);"></span>
+                Pastel Sweet
+            </button>
+            <button class="theme-btn" data-theme="hyper-minimal" style="--btn-color: #a8ff78;" title="Hyper Minimal">
+                <span class="color-dot" style="background: linear-gradient(135deg, #a8ff78, #78ffd6);"></span>
+                Retro Terminal
+            </button>
+        </div>
+        <div class="custom-control">
+            <label for="particle-speed">Background Speed</label>
+            <input type="range" id="particle-speed" min="0" max="50" value="15">
+        </div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#internship" class="nav-link">Internship</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="badge fade-in">Creative Developer Portfolio</div>
+                    <h1 class="hero-title fade-in">
+                        Hello, I'm <span class="gradient-text">KISHORE G</span>
+                    </h1>
+                    <h2 class="hero-subtitle fade-in">
+                        I build <span id="typewriter" class="typewriter"></span>
+                    </h2>
+                    <p class="hero-desc fade-in">
+                        Crafting highly interactive, modern web experiences that combine state-of-the-art aesthetics with rock-solid functionality. Let's make something amazing.
+                    </p>
+                    <div class="hero-actions fade-in">
+                        <a href="#projects" class="btn btn-primary btn-glow">
+                            <span>View Projects</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="resume.pdf" download="KISHORE_G_Resume.pdf" class="btn btn-resume">
+                            <i class="fa-solid fa-download"></i>
+                            <span>Download Resume</span>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <span>Get In Touch</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual fade-in">
+                    <div class="interactive-avatar-container">
+                        <!-- Neon Ring Canvas / Spinner -->
+                        <div class="glowing-ring"></div>
+                        <div class="glowing-ring ring-two"></div>
+                        <div class="avatar-card">
+                            <img src="avatar.png" alt="KISHORE G Profile" class="avatar-img" id="avatar-image">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- About & Skills Section -->
+        <section id="about" class="about-section section-padding">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <span class="section-tag">Inside My Mind</span>
+                    <h2 class="section-title">About & Skills</h2>
+                    <div class="section-underline"></div>
+                </div>
+
+                <div class="about-grid">
+                    <!-- Bio Column -->
+                    <div class="about-bio scroll-reveal">
+                        <div class="glass-card bio-card">
+                            <h3>My Journey</h3>
+                            <p>
+                                I am a passionate Data Science specialist and Developer currently working as a <strong>Data Science (Python) Trainer</strong> at <strong>EDWYNA TECHNOLOGIES</strong>. I enjoy teaching and building predictive models, data analysis scripts, and solid programming solutions.
+                            </p>
+                            <p>
+                                Currently pursuing a B.Tech in Information Technology at <strong>M Kumarasamy College of Engineering</strong>, I enjoy solving analytical challenges, designing clean systems, and exploring multi-disciplinary fields, including achieving a Japanese N5 Language certification with an A1 grade.
+                            </p>
+                            
+                            <h3 style="margin-top: 2rem;">Education Journey</h3>
+                            <div class="education-timeline" style="margin-top: 1rem; display: flex; flex-direction: column; gap: 1.8rem;">
+                                <div style="border-left: 2px solid var(--accent-1); padding-left: 1rem; position: relative;">
+                                    <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-1); display: block;">2024 - Present</span>
+                                    <strong style="display: block; font-size: 0.95rem;">B.Tech Information Technology</strong>
+                                    <span style="font-size: 0.85rem; color: var(--text-secondary);">M Kumarasamy College of Engineering, Karur</span>
+                                    <span style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-2); margin-left: 0.5rem;">CGPA: 8.3</span>
+                                </div>
+                                <div style="border-left: 2px solid var(--accent-1); padding-left: 1rem; position: relative;">
+                                    <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-1); display: block;">HSC (Grade XII)</span>
+                                    <strong style="display: block; font-size: 0.95rem;">Shree Valli Matric Higher Sec School</strong>
+                                    <span style="font-size: 0.85rem; color: var(--text-secondary);">Kodumudi, Tamil Nadu</span>
+                                    <span style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-2);">Percentage: 86%</span>
+                                </div>
+                                <div style="border-left: 2px solid var(--accent-1); padding-left: 1rem; position: relative;">
+                                    <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-1); display: block;">SSLC (Grade X)</span>
+                                    <strong style="display: block; font-size: 0.95rem;">Shree Valli Matric Higher Sec School</strong>
+                                    <span style="font-size: 0.85rem; color: var(--text-secondary);">Kodumudi, Tamil Nadu</span>
+                                    <span style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-2);">Percentage: 92%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skills Column -->
+                    <div class="about-skills scroll-reveal">
+                        <div class="glass-card skills-card">
+                            <h3>Professional Skills</h3>
+                            <div class="skills-grid" style="display: flex; flex-direction: column; gap: 1.8rem; margin-top: 1.5rem;">
+                                <div class="skill-category">
+                                    <h4 style="font-family: var(--font-heading); color: var(--accent-1); margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.6rem;">
+                                        <i class="fa-brands fa-python" style="color: #3776AB;"></i> Data Science & Machine Learning
+                                    </h4>
+                                    <div class="project-tags">
+                                        <span>Python Programming</span>
+                                        <span>Pandas</span>
+                                        <span>NumPy</span>
+                                        <span>Scikit-Learn</span>
+                                        <span>Exploratory Data Analysis (EDA)</span>
+                                        <span>Predictive Model Building</span>
+                                    </div>
+                                </div>
+
+                                <div class="skill-category">
+                                    <h4 style="font-family: var(--font-heading); color: var(--accent-1); margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.6rem;">
+                                        <i class="fa-solid fa-language" style="color: #E0115F;"></i> Languages & Mentoring
+                                    </h4>
+                                    <div class="project-tags">
+                                        <span>Technical Instruction</span>
+                                        <span>Curriculum Training</span>
+                                        <span>Japanese N5 (A1 Grade)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Internship Section -->
+        <section id="internship" class="internship-section section-padding">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <span class="section-tag">Professional Experience</span>
+                    <h2 class="section-title">Internship</h2>
+                    <div class="section-underline"></div>
+                </div>
+
+                <div class="internship-wrapper scroll-reveal">
+                    <div class="glass-card internship-card">
+                        <div class="internship-icon-col">
+                            <div class="internship-icon-wrap">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                        </div>
+                        <div class="internship-details">
+                            <div class="internship-meta">
+                                <span class="internship-domain-tag"><i class="fa-solid fa-layer-group"></i> Web Development</span>
+                            </div>
+                            <h3 class="internship-role">Web Development Intern</h3>
+                            <div class="internship-company">
+                                <i class="fa-solid fa-building"></i>
+                                <span>Zeboto Technologies</span>
+                                <span class="internship-divider">|</span>
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span>Coimbatore, Tamil Nadu</span>
+                            </div>
+                            <p class="internship-desc">
+                                Completed an internship focused on <strong>Web Development</strong> at Zeboto Technologies, gaining hands-on experience in building responsive web applications and modern front-end technologies.
+                            </p>
+                            <div class="internship-skills">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>Responsive Design</span>
+                                <span>Web Technologies</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section section-padding">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <span class="section-tag">Featured Works</span>
+                    <h2 class="section-title">Projects Showroom</h2>
+                    <div class="section-underline"></div>
+                </div>
+
+                <!-- Projects Filter Bar -->
+                <div class="filter-bar scroll-reveal">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="java">Java Apps</button>
+                    <button class="filter-btn" data-filter="python">Python Programs</button>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="projects-grid">
+                    <!-- Project Card 1: Hostel Management System -->
+                    <div class="project-card scroll-reveal" data-category="java">
+                        <div class="project-media">
+                            <img src="project_hostel.png" alt="Hostel Management System" class="project-img">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/Kishore23126" target="_blank" class="project-link-btn" title="Source Code on GitHub"><i class="fa-brands fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Java Apps</span>
+                            <h3 class="project-title">Hostel Management System</h3>
+                            <p class="project-desc">
+                                A database-driven desktop portal facilitating comprehensive hostel administration, room assignments, guest databases, billing logs, and record updates.
+                            </p>
+                             <div class="project-tags">
+                                <span>Java OOP</span>
+                                <span>Data Management</span>
+                                <span>GUI Interface</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2: Number Guessing Game -->
+                    <div class="project-card scroll-reveal" data-category="python">
+                        <div class="project-media">
+                            <img src="project_arcade.png" alt="Number Guessing Game" class="project-img">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/Kishore23126" target="_blank" class="project-link-btn" title="Source Code on GitHub"><i class="fa-brands fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Python Programs</span>
+                            <h3 class="project-title">Number Guessing Game</h3>
+                            <p class="project-desc">
+                                A logic game prompting users to narrow down random values within dynamic numerical ranges. Built with responsive validations and score tallies.
+                            </p>
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>Random Engine</span>
+                                <span>Game Loop</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section section-padding">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <span class="section-tag">Let's Connect</span>
+                    <h2 class="section-title">Drop A Message</h2>
+                    <div class="section-underline"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact Information -->
+                    <div class="contact-info scroll-reveal">
+                        <div class="glass-card info-card">
+                            <h3>Have a project in mind?</h3>
+                            <p>Feel free to reach out for contract work, full-time positions, or just to say hello. I'm always excited about new opportunities.</p>
+                            
+                            <div class="contact-details">
+                                <div class="detail-item">
+                                    <span class="detail-icon"><i class="fa-solid fa-envelope"></i></span>
+                                    <div>
+                                        <h4>Email</h4>
+                                        <p><a href="mailto:kishore23126@gmail.com">kishore23126@gmail.com</a></p>
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-icon"><i class="fa-solid fa-location-dot"></i></span>
+                                    <div>
+                                        <h4>Location</h4>
+                                        <p>Tamil Nadu, India</p>
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-icon"><i class="fa-solid fa-phone"></i></span>
+                                    <div>
+                                        <h4>Mobile</h4>
+                                        <p><a href="tel:+919150589694">+91 9150589694</a></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="social-links">
+                                <a href="https://github.com/Kishore23126" target="_blank" class="social-icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/kishore-g-389b53328/" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-container scroll-reveal">
+                        <form id="portfolio-contact-form" class="glass-card contact-form" novalidate>
+                            <div class="form-group">
+                                <input type="text" id="form-name" name="name" required placeholder=" ">
+                                <label for="form-name">Your Name</label>
+                                <span class="input-focus-line"></span>
+                                <span class="validation-message">Please enter your name.</span>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="email" id="form-email" name="email" required placeholder=" ">
+                                <label for="form-email">Your Email</label>
+                                <span class="input-focus-line"></span>
+                                <span class="validation-message">Please enter a valid email address.</span>
+                            </div>
+
+                            <div class="form-group">
+                                <textarea id="form-message" name="message" required placeholder=" " rows="5"></textarea>
+                                <label for="form-message">Your Message</label>
+                                <span class="input-focus-line"></span>
+                                <span class="validation-message">Please enter your message.</span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-submit btn-glow">
+                                <span>Send Message</span>
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+
+                            <div id="form-feedback" class="form-feedback"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+
+
+    <!-- Success Popup Modal -->
+    <div id="success-popup" class="success-popup-backdrop">
+        <div class="success-popup-card glass-card">
+            <button class="success-popup-close-x" id="success-popup-close-x" aria-label="Close popup">&times;</button>
+            <div class="success-icon-wrap">
+                <div class="success-icon-circle">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+            </div>
+            <h3 class="success-popup-title gradient-text">Message Successful</h3>
+            <p class="success-popup-message" id="success-popup-message">Thank you, Kishore! Your message has been sent successfully.</p>
+            <button id="success-popup-close-btn" class="btn btn-primary btn-glow success-popup-btn">
+                <span>Back to Portfolio</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
